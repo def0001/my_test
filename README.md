@@ -2,4 +2,4 @@
 Первый раз создаю репозиторий. Хочу потыкать всё что тыкаеться, что бы в будущем уметь создавать нормальные репозитории.
 Иногда буду загружать сюда всякий бред.
 
-![cat](https://github.com/user-attachments/assets/adcdbcdd-e9a0-4f0a-8611-53690fba4212)
+![image](https://github.com/user-attachments/assets/6b51fc27-f2cc-403b-bcad-8f0e0f96bb0f)
