@@ -1,3 +1,4 @@
+// ыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыы
 namespace test1
 {
     class Program
@@ -19,7 +20,7 @@ namespace test1
             for (int i = 1; i < numbers.Length; i++)
             {
                 numbers[i] = Convert.ToInt16(rand.Next(n2, n3));
-                Console.WriteLine($"Number {i}: {numbers[i]}");
+                Console.WriteLine($"Число {i}: {numbers[i]}");
             }
         }
     }
