@@ -1,39 +1,18 @@
-// Прошло всего несколько дней с того момента, как я начал изучать C#. Пока что, это всё что я умею.
-using System;
-
-namespace project
+// Прошло немного больше времени.
+namespace for_tests
 {
     class Program
     {
         static void Main()
         {
-            Console.Write("Введите слово: ");
-            string word = Console.ReadLine();
-            if (word == null)
-            {
-                word = "null";
-            }
+            Console.Write("Введите текст: ");
+            String text = Console.ReadLine() ?? "text";
+            Console.Write("Введите число повторений: ");
+            int num = Convert.ToInt32(Console.ReadLine() ?? "10");
 
-            while (true)
+            for (int i = 1; i < num+1; i++)
             {
-                Console.Write("Введите число повторений (не больше 32,766 и не меньше 2): ");
-                short number = Convert.ToInt16(Console.ReadLine());
-                if (number >= 32767 && number <= 1) // Предохранитель от краша
-                {
-                    number = 1;
-                    Console.WriteLine("Блять долбаи давай по новой");
-                    Console.Write("Введите число повторений (не больше 32,767): ");
-                    number = Convert.ToInt16(Console.ReadLine());
-                }
-                else
-                {
-                    for (short i = 0; i <= number; i++)
-                    {
-                        Console.WriteLine($"{i}) {word}");
-                    }
-                    break;
-                }
-
+                Console.WriteLine($"{i} {text}");
             }
         }
     }
