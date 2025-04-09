@@ -16,7 +16,7 @@ namespace Pisdec
                     if (result == -1)
                     {
                         Console.WriteLine("\nНеверный номер программы!");
-                        Console.WriteLine("1-5, ~ для вывода списка доступных программ.\n");
+                        Console.WriteLine("1-3, ~ для вывода списка доступных программ.\n");
                     }
                     else if (result == 1)
                     {
