@@ -13,7 +13,7 @@ namespace Calculator_3._0
                 var timerSpeed = Console.ReadLine();
                 Console.Clear();
                 
-                if (int.TryParse(timerSpeed, out delay) && delay != 0)
+                if (int.TryParse(timerSpeed, out delay) && delay > 0)
                 {
                     Console.Clear();
                     break;
