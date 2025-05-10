@@ -9,7 +9,7 @@ namespace Project1
 
             Random rand = new();
 
-            byte tryCount = Convert.ToByte(rand.Next(5, 15));
+            byte tryCount = (byte)rand.Next(5, 15);
 
             byte minValue;
             byte maxValue;
@@ -27,7 +27,7 @@ namespace Project1
                     break;
             }
 
-            byte imgValue = Convert.ToByte(rand.Next(minValue, maxValue));
+            byte imgValue = Convert.ToByte(rand.Next(minValue + 1, maxValue));
 
             string? str;
             int strNum;
@@ -39,17 +39,8 @@ namespace Project1
             {
                 Console.Write($"({tryCount})> ");
                 str = Console.ReadLine();
-                try
-                {
-                    if (string.IsNullOrEmpty(str))
-                    {
-                        Console.WriteLine("Строка не может быть пустой!");
-                        continue;
-                    }
 
-                    strNum = int.Parse(str);
-                }
-                catch
+                if (!int.TryParse(str, out strNum))
                 {
                     Console.WriteLine("В строке может быть только число!");
                     continue;
