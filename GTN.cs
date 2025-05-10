@@ -27,7 +27,8 @@ namespace Project1
 
                 if (str == imgValue && tryCount !< 0)
                 {
-                    
+                    Console.WriteLine($"Вы угадали число {imgValue}! Поздравляем!!");
+                    break;
                 }
                 else
                 {
