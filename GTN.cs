@@ -11,11 +11,26 @@ namespace Project1
 
             byte tryCount = Convert.ToByte(rand.Next(5, 15));
 
-            byte minValue = Convert.ToByte(rand.Next(minByte, maxByte));
-            byte maxValue = Convert.ToByte(rand.Next(minByte, maxByte));
+            byte minValue;
+            byte maxValue;
+
+            while (true)
+            {
+                minValue = Convert.ToByte(rand.Next(minByte, maxByte));
+                maxValue = Convert.ToByte(rand.Next(minByte, maxByte));
+
+                if (minValue >= maxValue)
+                {
+                    continue;
+                }
+                else
+                    break;
+            }
+
             byte imgValue = Convert.ToByte(rand.Next(minValue, maxValue));
 
-            int? str;
+            string? str;
+            int strNum;
 
             Console.WriteLine($"Я загадал число, которое больше {minValue} и меньше {maxValue}.");
             Console.WriteLine($"У тебя есть {tryCount} попыток, что бы отгадать загаданное число!");
@@ -23,9 +38,24 @@ namespace Project1
             while (true)
             {
                 Console.Write($"({tryCount})> ");
-                str = Convert.ToInt32(Console.ReadLine());
+                str = Console.ReadLine();
+                try
+                {
+                    if (string.IsNullOrEmpty(str))
+                    {
+                        Console.WriteLine("Строка не может быть пустой!");
+                        continue;
+                    }
 
-                if (str == imgValue && tryCount !< 0)
+                    strNum = int.Parse(str);
+                }
+                catch
+                {
+                    Console.WriteLine("В строке может быть только число!");
+                    continue;
+                }
+
+                if (strNum == imgValue && tryCount > 0)
                 {
                     Console.WriteLine($"Вы угадали число {imgValue}! Поздравляем!!");
                     break;
