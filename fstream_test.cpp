@@ -25,7 +25,7 @@ int main() {
 			std::cout << "(path)> ";
 			std::cin.getline(path, sizeof(path));
 			readFile(path);
-		} else if (std::strcmp(act, "e") || std::strcmp(act, "exit")) {
+		} else if (std::strcmp(act, "e") == 0 || std::strcmp(act, "exit") == 0) {
 			return 0;
 		} else {
 			std::cerr << "Error: unknow action \"" << act << "\"!\n";
